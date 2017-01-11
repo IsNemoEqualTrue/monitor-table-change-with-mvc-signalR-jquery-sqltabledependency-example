@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SqlTableDependencly with SignalR</title>
+    <link href="StockTicker.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>SqlTableDependencly with SignalR</h1>
+
+    <p>
+        <a href="https://tabledependency.codeplex.com/" target="_blank">TableDependency</a> is a generic C# component used to send events when table content change.<br />
+        There are implementations for SQL Server and ORACLE. From those databases, TableDependency receive notifications that in turn are transformed in events containing a model populated with table value changed relative to the Insert/Update/Delete operation performed.
+        TableDependency work generating on the fly database objects as Queue, Service Broker, Trigger and Stored procedure. Those object are dropped once the TableDependency is disposed.
+        <br /><br />
+        Basically TableDependency is an enhancement of .NET SqlDepenency/OracleDependency with the advantage of send events containing values for the record inserted, changed or deleted, as well as the DML operation (insert/delete/update) executed on the table.
+        This is the real difference with. NET SqlDepenency/OracleDependency : those classes, in fact, don't tell you what data was changed on the database.
+    </p>
+
+    <b>How to Test</b>
+    <p>
+        <ul>
+            <li>
+                Create a table as follow: CREATE TABLE [dbo].[Stocks]([Code] [nvarchar](50) NOT NULL, [Name] [nvarchar](50) NOT NULL, [Price] [decimal](18, 0) NOT NULL)
+            </li>
+            <li>Populate the table wit some data</li>
+            <li>Run the web application</li>
+            <li>Modify any data in the table to get an immediate notification with NO polling.</li>
+        </ul>
+    </p>
+    <div id="stockTable">
+        <table border="1">
+            <thead style="background-color:silver">
+                <tr><th>Symbol</th><th>Name</th><th>Price</th></tr>
+            </thead>
+            <tbody>
+                <tr class="loading"><td colspan="3">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="jquery.color-2.1.2.min.js"></script>
+    <script src="jquery.UI-1.10.js"></script>
+    <script src="../Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="../signalr/hubs"></script>
+    <script src="SignalR.StockTicker.js"></script>
+</body>
+</html>
