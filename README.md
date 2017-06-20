@@ -25,7 +25,7 @@ public class Stock
 
 Next, we install the NuGet package:
 
-```C#
+```
 PM> Install-Package SqlTableDependency
 ```
 
