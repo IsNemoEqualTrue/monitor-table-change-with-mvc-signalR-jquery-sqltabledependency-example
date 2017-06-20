@@ -26,7 +26,7 @@ public class Stock
 Next, we install the NuGet package:
 
 ```C#
-**PM> Install-Package SqlTableDependency**
+PM> Install-Package SqlTableDependency**
 ```
 
 Next step is to create a custom hub class, used from the SignalR infrastructure:
