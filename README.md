@@ -1,5 +1,5 @@
 # Detect record table change with MVC, SignalR, jQuery and SqlTableDependency
-[SqlTableDependency](https://www.google.com)
+[SqlTableDependency](https://github.com/christiandelbianco/monitor-table-change-with-sqltabledependency)
 SqlTableDependency is a high-level C# component to used to audit, monitor and receive notifications on SQL Server's record table change.
 
 For all Insert/Update/Delete operation on monitored table, TableDependency receive events containing values for the record inserted, changed or deleted, as well as the DML operation executed on the table, eliminating the need of an additional SELECT to update application’s data cache.
