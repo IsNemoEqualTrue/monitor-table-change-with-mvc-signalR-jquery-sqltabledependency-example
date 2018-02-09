@@ -230,8 +230,7 @@ $(function () {
     var ticker = $.connection.stockTicker; // the generated client-side hub proxy
     var $stockTable = $('#stockTable');
     var $stockTableBody = $stockTable.find('tbody');
-    var rowTemplate = '<tr data-symbol="{Symbol}"><td>
-    {Symbol}</td><td>{Name}</td><td>{Price}</td></tr>';
+    var rowTemplate = '<tr data-symbol="{Symbol}"><td>{Symbol}</td><td>{Name}</td><td>{Price}</td></tr>';
 
     function formatStock(stock) {
         return $.extend(stock, {
