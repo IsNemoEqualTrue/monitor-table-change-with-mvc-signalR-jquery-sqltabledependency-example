@@ -282,5 +282,5 @@ namespace Stocks
 }
 ```
 
-For more info about SqlTableDependency, refere to https://github.com/christiandelbianco/monitor-table-change-with-sqltabledependency 
+For more info about SqlTableDependency, refere to https://github.com/christiandelbianco/monitor-table-change-with-sqltabledependency. Working example visible to http://sqltabledependency.somee.com/test.
 
